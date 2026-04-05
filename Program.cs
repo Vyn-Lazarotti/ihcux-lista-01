@@ -9,7 +9,7 @@ public class Program
 
         do
         {
-            Console.WriteLine("Digite uma opção entre 1 e 3: "); // Heurística #3 (Controle e Liberdade)
+            Console.WriteLine("Digite entre 1 e 3 para operar a máquina e qualquer valor diferente para sair: "); // Heurística #3 (Controle e Liberdade)
             int opcao;
             bool validInput = int.TryParse(Console.ReadLine(), out opcao);
 
@@ -54,6 +54,10 @@ public class Program
                 int randomInt = rnd.Next(0, 21);
                 Console.WriteLine("Total: R$ " + randomInt + ".00");
                 Console.WriteLine("Pagamento concluído! Tenha uma boa refeição!");
+            }
+
+            if (opcao < 0 || opcao > 3) {
+                xyz = false;
             }
 
             //break;
